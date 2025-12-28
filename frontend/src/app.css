@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Glassmorphism Base Styles */
+@layer components {
+  .glass-card {
+    @apply bg-charcoal/40 backdrop-blur-glass border border-white/10 rounded-2xl;
+  }
+
+  .glass-card-hover {
+    @apply transition-all duration-300 hover:bg-charcoal/60 hover:border-emerald/30;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-emerald to-cyan bg-clip-text text-transparent;
+  }
+
+  .btn-primary {
+    @apply px-6 py-3 bg-gradient-to-r from-emerald to-cyan text-white font-semibold rounded-lg shadow-lg hover:shadow-emerald/50 transition-all duration-300;
+  }
+
+  .btn-secondary {
+    @apply px-6 py-3 border border-emerald text-emerald font-semibold rounded-lg hover:bg-emerald hover:text-midnight-blue transition-all duration-300;
+  }
+
+  .input-glass {
+    @apply w-full px-4 py-3 bg-charcoal/40 backdrop-blur-glass border border-white/10 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-emerald/50 transition-all;
+  }
+}
+
+/* Global Styles */
+body {
+  @apply bg-midnight-blue text-white font-sans;
+  background-image: radial-gradient(circle at 50% 0%, #2C2C34 0%, #1A1A2E 50%);
+  background-attachment: fixed;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1A1A2E;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #00D9A3;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00B4D8;
+}

@@ -1,0 +1,29 @@
+Mobile App Design Brief: WealthFlow (Fintech)
+App Concept: Premium AI-driven personal finance and budget planner.
+Design Aesthetic: Dark Mode, Glassmorphism, 3D Data Visualization, and Modern Luxury.
+🎨 Global Design & Styling Instructions
+To ensure all images look like they belong to the same app, apply these constraints to every generation:
+Primary Palette: Deep Midnight Blue (#1A1A2E) and Charcoal.
+Accent Colors: Electric Emerald Green (Growth), Cyan Blue (Tech), and Metallic Gold (Premium).
+Visual Style: Heavy use of "Glassmorphism" (frosted glass/translucency), soft inner glows, and 3D depth.
+Typography: Clean, high-contrast white sans-serif (Inter or SF Pro).
+Device: iPhone 15/16 Pro mockup, high-fidelity, 8k resolution, cinematic lighting.
+🖼️ Master Prompt List (By Page)
+Page 1: Splash & Onboarding
+Prompt: A high-fidelity mobile app splash screen for 'WealthFlow'. The center features a sleek, minimalist 3D gold-line logo. The background is a sophisticated deep midnight blue gradient. Large, elegant white typography reads 'Master Your Money'. Below it, a single 'Get Started' button with a glowing emerald green gradient and glassmorphism effect. Photorealistic, 8k, iOS 18 style.
+Page 2: Secure Login & Biometrics
+Prompt: A secure mobile login screen for 'WealthFlow'. A prominent 'FaceID' biometric authentication icon in the center with a soft cyan glow and frosted-glass refraction. Below the icon, a clean 'Login with Password' text link. The UI features a premium glassmorphism overlay against a dark, secure-feeling background. Sharp details, high-end banking aesthetic.
+Page 3: Premium Subscription (WealthFlow Pro)
+Prompt: A subscription plan page featuring three tiered pricing cards (Basic, Pro, Elite) with high-end glassmorphism. The 'Pro' card is highlighted with a glowing metallic gold border and a 'Most Popular' badge. Large gold 'Start Free Trial' button at the bottom. Elegant, luxury fintech aesthetic, high-contrast details.
+Page 4: Main Dashboard (Overview)
+Prompt: The main dashboard UI. A large frosted-glass card at the top displays 'Total Balance: $12,450.00'. Below it, a dynamic 3D line chart shows a 30-day wealth trend in emerald green. Translucent side-by-side cards for 'Income' and 'Expenses'. A list of recent transactions at the bottom with minimalist icons. Deep navy and charcoal gradients.
+Page 5: Budgeting & Category Limits
+Prompt: A monthly budgeting view. The UI features horizontal progress bars for categories: 'Housing', 'Dining', and 'Travel'. Bars glow emerald green (safe), amber (warning), or red (over limit). Clean, card-based layout with soft shadows and vibrant micro-icons. Figma-inspired layout, minimalist UX.
+Page 6: Savings Goals (Milestones)
+Prompt: A savings goal tracker view. Features 3D holographic "bubbles" representing different goals: 'New Home' (75% full) and 'Emergency Fund' (40% full). Soft inner glows and realistic glass textures. A large floating '+' button at the bottom center. Inspiring, clean, and modern.
+Page 7: Investment Portfolio & Markets
+Prompt: An investment portfolio screen. A bold 3D donut chart at the top shows asset allocation (Stocks, Crypto, Gold). Below, a scrolling list of real-time stock tickers with green 'up' and red 'down' indicators. Professional, data-heavy but clean, futuristic fintech aesthetic.
+Page 8: Transaction Detail & Map
+Prompt: A single transaction detail page for a high-end purchase. Large currency text at the top. A minimalist map thumbnail shows the location of the transaction. Digital receipt view with glassmorphism textures and 'Split Bill' or 'Export' buttons at the bottom.
+Page 9: AI Financial Insights
+Prompt: A 'Smart Insights' report view. AI-generated text cards with summarized habits: 'Spending is down 12%'. Includes vibrant bar charts and a 'Predicted Future Balance' line chart. Editorial-style layout, sophisticated data visualization, high-fidelity render.
