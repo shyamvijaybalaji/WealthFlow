@@ -55,11 +55,11 @@
 	<Sidebar />
 
 	<!-- Main Content -->
-	<main class="flex-1 p-8">
+	<main class="flex-1 px-4 pt-20 pb-4 sm:p-6 md:p-8">
 		<!-- Header -->
-		<div class="mb-8">
-			<h1 class="text-4xl font-bold gradient-text mb-2">Dashboard</h1>
-			<p class="text-white/70">Welcome back, {$auth.user?.full_name || $auth.user?.email}!</p>
+		<div class="mb-6 md:mb-8">
+			<h1 class="text-3xl md:text-4xl font-bold gradient-text mb-1 md:mb-2">Dashboard</h1>
+			<p class="text-sm md:text-base text-white/70">Welcome back, {$auth.user?.full_name || $auth.user?.email}!</p>
 		</div>
 
 		{#if loading}

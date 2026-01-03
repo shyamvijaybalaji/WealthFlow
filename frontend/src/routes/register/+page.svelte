@@ -48,9 +48,9 @@
 <div class="min-h-screen flex items-center justify-center px-4 py-12">
 	<div class="glass-card p-8 w-full max-w-md">
 		<!-- Header -->
-		<div class="text-center mb-8">
-			<h1 class="text-4xl font-bold mb-2 gradient-text">Get Started</h1>
-			<p class="text-white/70">Create your WealthFlow account</p>
+		<div class="text-center mb-6 md:mb-8">
+			<h1 class="text-3xl md:text-4xl font-bold mb-2 gradient-text">Get Started</h1>
+			<p class="text-sm md:text-base text-white/70">Create your WealthFlow account</p>
 		</div>
 
 		<!-- Error Message -->

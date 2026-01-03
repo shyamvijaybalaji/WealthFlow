@@ -10,20 +10,20 @@
 <div class="min-h-screen flex items-center justify-center px-4">
 	<div class="max-w-4xl w-full text-center">
 		<!-- Hero Section -->
-		<div class="mb-12">
-			<h1 class="text-6xl font-bold mb-4 gradient-text">
+		<div class="mb-8 md:mb-12">
+			<h1 class="text-4xl sm:text-5xl md:text-6xl font-bold mb-3 md:mb-4 gradient-text">
 				WealthFlow
 			</h1>
-			<p class="text-2xl text-white/80 mb-2">
+			<p class="text-xl sm:text-2xl text-white/80 mb-2">
 				Master Your Money
 			</p>
-			<p class="text-lg text-white/60">
+			<p class="text-base md:text-lg text-white/60">
 				AI-Driven Personal Finance & Budget Planning
 			</p>
 		</div>
 
 		<!-- CTA Buttons -->
-		<div class="flex gap-4 justify-center">
+		<div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center max-w-sm sm:max-w-none mx-auto">
 			<a href="/register" class="btn-primary">
 				Get Started
 			</a>

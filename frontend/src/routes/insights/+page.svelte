@@ -64,11 +64,11 @@
 <div class="flex min-h-screen">
 	<Sidebar />
 
-	<main class="flex-1 p-8">
+	<main class="flex-1 px-4 pt-20 pb-4 sm:p-6 md:p-8">
 		<!-- Header -->
-		<div class="mb-8">
-			<h1 class="text-4xl font-bold gradient-text mb-2">AI Financial Insights</h1>
-			<p class="text-white/70">Personalized recommendations based on your spending patterns</p>
+		<div class="mb-6 md:mb-8">
+			<h1 class="text-3xl md:text-4xl font-bold gradient-text mb-1 md:mb-2">AI Financial Insights</h1>
+			<p class="text-sm md:text-base text-white/70">Personalized recommendations based on your spending patterns</p>
 		</div>
 
 		<!-- Error Message -->

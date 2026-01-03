@@ -127,14 +127,14 @@
 <div class="flex min-h-screen">
 	<Sidebar />
 
-	<main class="flex-1 p-8">
+	<main class="flex-1 px-4 pt-20 pb-4 sm:p-6 md:p-8">
 		<!-- Header -->
-		<div class="flex items-center justify-between mb-8">
+		<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-6 md:mb-8">
 			<div>
-				<h1 class="text-4xl font-bold gradient-text mb-2">Investment Portfolio</h1>
-				<p class="text-white/70">Track your stocks, crypto, and other investments</p>
+				<h1 class="text-3xl md:text-4xl font-bold gradient-text mb-1 md:mb-2">Investment Portfolio</h1>
+				<p class="text-sm md:text-base text-white/70">Track your stocks, crypto, and other investments</p>
 			</div>
-			<button onclick={() => showCreateModal = true} class="btn-primary">
+			<button onclick={() => showCreateModal = true} class="btn-primary whitespace-nowrap">
 				+ Add Investment
 			</button>
 		</div>
@@ -371,7 +371,7 @@
 						</div>
 
 						<!-- Buttons -->
-						<div class="flex gap-4">
+						<div class="flex flex-col sm:flex-row gap-3 sm:gap-4">
 							<button
 								type="submit"
 								class="btn-primary flex-1"

@@ -3,6 +3,8 @@
 	import { goto } from '$app/navigation';
 	import { page } from '$app/stores';
 
+	let mobileMenuOpen = $state(false);
+
 	function handleLogout() {
 		auth.logout();
 		goto('/login');
@@ -22,9 +24,32 @@
 	function isActive(path: string): boolean {
 		return $page.url.pathname === path;
 	}
+
+	function handleNavClick() {
+		// Close mobile menu when navigation item is clicked
+		mobileMenuOpen = false;
+	}
 </script>
 
-<aside class="w-64 glass-card min-h-screen p-6 flex flex-col">
+<!-- Mobile Menu Button (visible only on mobile) -->
+<button
+	onclick={() => mobileMenuOpen = !mobileMenuOpen}
+	class="md:hidden fixed top-4 left-4 z-50 p-3 glass-card rounded-lg text-2xl hover:bg-charcoal/60 transition-all"
+	aria-label="Toggle menu"
+>
+	{mobileMenuOpen ? '✕' : '☰'}
+</button>
+
+<!-- Overlay (visible only when mobile menu is open) -->
+{#if mobileMenuOpen}
+	<div
+		onclick={() => mobileMenuOpen = false}
+		class="md:hidden fixed inset-0 bg-black/60 backdrop-blur-sm z-40"
+	></div>
+{/if}
+
+<!-- Sidebar -->
+<aside class="w-64 glass-card min-h-screen p-6 flex flex-col fixed md:static z-40 transition-transform duration-300 {mobileMenuOpen ? 'translate-x-0' : '-translate-x-full md:translate-x-0'}">
 	<!-- Logo -->
 	<div class="mb-8">
 		<h1 class="text-2xl font-bold gradient-text">WealthFlow</h1>
@@ -49,6 +74,7 @@
 		{#each navItems as item}
 			<a
 				href={item.path}
+				onclick={handleNavClick}
 				class="flex items-center gap-3 px-4 py-3 rounded-lg transition-all {isActive(item.path)
 					? 'bg-emerald/20 text-emerald border border-emerald/30'
 					: 'text-white/70 hover:bg-white/10 hover:text-white'}"
