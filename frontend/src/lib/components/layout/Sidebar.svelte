@@ -36,14 +36,27 @@
 	}
 </script>
 
-<!-- Mobile Menu Button (visible only on mobile) -->
-<button
-	onclick={() => mobileMenuOpen = !mobileMenuOpen}
-	class="md:hidden fixed top-4 left-4 z-50 p-3 glass-card rounded-lg text-2xl hover:bg-charcoal/60 transition-all"
-	aria-label="Toggle menu"
->
-	{mobileMenuOpen ? '✕' : '☰'}
-</button>
+<!-- Mobile Top Buttons (visible only on mobile) -->
+<div class="md:hidden fixed top-4 left-4 right-4 z-50 flex justify-between items-center">
+	<!-- Menu Toggle Button -->
+	<button
+		onclick={() => mobileMenuOpen = !mobileMenuOpen}
+		class="p-3 glass-card rounded-lg text-2xl hover:bg-charcoal/60 transition-all"
+		aria-label="Toggle menu"
+	>
+		{mobileMenuOpen ? '✕' : '☰'}
+	</button>
+
+	<!-- Mobile Logout Button -->
+	<button
+		onclick={handleLogout}
+		class="p-3 glass-card rounded-lg text-xl hover:bg-red-500/20 transition-all"
+		aria-label="Logout"
+		title="Logout"
+	>
+		🚪
+	</button>
+</div>
 
 <!-- Overlay (visible only when mobile menu is open) -->
 {#if mobileMenuOpen}
@@ -54,7 +67,7 @@
 {/if}
 
 <!-- Sidebar -->
-<aside class="w-64 glass-card min-h-screen p-6 flex flex-col fixed md:static z-40 transition-transform duration-300 {mobileMenuOpen ? 'translate-x-0' : '-translate-x-full md:translate-x-0'}">
+<aside class="w-64 glass-card min-h-screen max-h-screen overflow-y-auto p-6 flex flex-col fixed md:static z-40 transition-transform duration-300 {mobileMenuOpen ? 'translate-x-0' : '-translate-x-full md:translate-x-0'}">
 	<!-- Logo -->
 	<div class="mb-8">
 		<h1 class="text-2xl font-bold gradient-text">WealthFlow</h1>
