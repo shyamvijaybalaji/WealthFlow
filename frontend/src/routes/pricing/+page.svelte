@@ -109,22 +109,22 @@
 	<Sidebar />
 
 	<!-- Main Content -->
-	<main class="flex-1 p-8 overflow-y-auto">
+	<main class="flex-1 px-4 pt-20 pb-4 sm:p-6 md:p-8 overflow-y-auto">
 		<div class="max-w-7xl mx-auto">
 			<!-- Header -->
-			<div class="text-center mb-16">
-				<h1 class="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-[#00D9A3] via-[#00B4D8] to-[#FFD700] bg-clip-text text-transparent">
+			<div class="text-center mb-8 md:mb-16">
+				<h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 bg-gradient-to-r from-[#00D9A3] via-[#00B4D8] to-[#FFD700] bg-clip-text text-transparent">
 					Simple, Transparent Pricing
 				</h1>
-				<p class="text-xl text-gray-300 max-w-2xl mx-auto">
+				<p class="text-base sm:text-lg md:text-xl text-gray-300 max-w-2xl mx-auto">
 					Choose the plan that fits your financial goals. No hidden fees, cancel anytime.
 				</p>
 			</div>
 
 			<!-- Pricing Cards -->
-			<div class="grid md:grid-cols-3 gap-8 mb-20">
+			<div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-12 md:mb-20">
 				{#each tiers as tier}
-					<div class="glass-card relative {tier.popular ? 'border-2 border-[#00D9A3] scale-105' : ''} transition-transform duration-300 hover:scale-105">
+					<div class="glass-card relative {tier.popular ? 'border-2 border-[#00D9A3] md:scale-105' : ''} transition-transform duration-300 hover:scale-105">
 						{#if tier.popular}
 							<div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-[#00D9A3] to-[#00B4D8] px-4 py-1 rounded-full text-sm font-semibold">
 								Most Popular
@@ -175,12 +175,12 @@
 
 			<!-- FAQ Section -->
 			<div class="max-w-3xl mx-auto">
-				<h2 class="text-3xl font-bold text-center mb-12 text-white">Frequently Asked Questions</h2>
-				<div class="space-y-6">
+				<h2 class="text-2xl md:text-3xl font-bold text-center mb-8 md:mb-12 text-white">Frequently Asked Questions</h2>
+				<div class="space-y-4 md:space-y-6">
 					{#each faqs as faq}
-						<div class="glass-card p-6">
-							<h3 class="text-xl font-semibold mb-3 text-[#00D9A3]">{faq.question}</h3>
-							<p class="text-gray-300">{faq.answer}</p>
+						<div class="glass-card p-4 md:p-6">
+							<h3 class="text-lg md:text-xl font-semibold mb-2 md:mb-3 text-[#00D9A3]">{faq.question}</h3>
+							<p class="text-sm md:text-base text-gray-300">{faq.answer}</p>
 						</div>
 					{/each}
 				</div>
