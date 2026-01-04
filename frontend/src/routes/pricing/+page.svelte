@@ -104,12 +104,12 @@
 	<meta name="description" content="Choose the perfect WealthFlow plan for your financial journey" />
 </svelte:head>
 
-<div class="flex min-h-screen bg-gradient-to-br from-[#1A1A2E] via-[#2C2C34] to-[#1A1A2E]">
+<div class="flex min-h-screen">
 	<!-- Sidebar -->
 	<Sidebar />
 
 	<!-- Main Content -->
-	<main class="flex-1 px-4 pt-20 pb-4 sm:p-6 md:p-8 overflow-y-auto">
+	<main class="flex-1 px-4 pt-20 pb-4 sm:p-6 md:p-8">
 		<div class="max-w-7xl mx-auto">
 			<!-- Header -->
 			<div class="text-center mb-8 md:mb-16">
@@ -196,13 +196,4 @@
 		</div>
 	</main>
 </div>
-
-<style>
-	.glass-card {
-		background: rgba(44, 44, 52, 0.4);
-		backdrop-filter: blur(10px);
-		border: 1px solid rgba(255, 255, 255, 0.1);
-		border-radius: 16px;
-	}
-</style>
 
