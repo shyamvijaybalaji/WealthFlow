@@ -19,6 +19,7 @@
 		{ path: '/savings', label: 'Savings Goals', icon: '💰' },
 		{ path: '/investments', label: 'Investments', icon: '📈' },
 		{ path: '/insights', label: 'AI Insights', icon: '🤖' },
+		{ path: '/pricing', label: 'Pricing', icon: '💎' },
 	];
 
 	function isActive(path: string): boolean {
@@ -90,3 +91,4 @@
 		Logout
 	</button>
 </aside>
+
