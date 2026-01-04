@@ -34,6 +34,25 @@ body {
   @apply bg-midnight-blue text-white font-sans;
   background-image: radial-gradient(circle at 50% 0%, #2C2C34 0%, #1A1A2E 50%);
   background-attachment: fixed;
+  overflow-x: hidden;
+}
+
+/* Prevent page overlap during navigation */
+#svelte {
+  position: relative;
+  min-height: 100vh;
+}
+
+/* Ensure proper page rendering without overlap */
+.flex.min-h-screen {
+  position: relative;
+  z-index: 1;
+}
+
+/* Ensure main content is properly positioned */
+main {
+  position: relative;
+  z-index: 1;
 }
 
 /* Scrollbar Styling */

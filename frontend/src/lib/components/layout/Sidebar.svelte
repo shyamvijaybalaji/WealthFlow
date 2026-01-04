@@ -22,9 +22,11 @@
 		{ path: '/pricing', label: 'Pricing', icon: '💎' },
 	];
 
+	// Use $derived for reactive current path in Svelte 5
+	let currentPath = $derived($page.url.pathname);
+
 	function isActive(path: string): boolean {
 		// Handle both exact match and trailing slash
-		const currentPath = $page.url.pathname;
 		return currentPath === path || currentPath === path + '/';
 	}
 
