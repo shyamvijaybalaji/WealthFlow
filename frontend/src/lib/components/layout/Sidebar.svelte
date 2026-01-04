@@ -23,7 +23,9 @@
 	];
 
 	function isActive(path: string): boolean {
-		return $page.url.pathname === path;
+		// Handle both exact match and trailing slash
+		const currentPath = $page.url.pathname;
+		return currentPath === path || currentPath === path + '/';
 	}
 
 	function handleNavClick() {
