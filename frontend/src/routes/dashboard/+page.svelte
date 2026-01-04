@@ -76,10 +76,10 @@
 				<!-- Total Balance Card -->
 				<div class="glass-card glass-card-hover p-6">
 					<div class="flex items-center gap-4">
-						<div class="text-4xl">💰</div>
-						<div class="flex-1">
+						<div class="text-4xl flex-shrink-0">💰</div>
+						<div class="flex-1 min-w-0">
 							<p class="text-white/60 text-sm">Total Balance</p>
-							<p class="text-3xl font-bold gradient-text">
+							<p class="text-2xl sm:text-3xl font-bold gradient-text truncate">
 								{formatCurrency(Number(summary.total_balance))}
 							</p>
 						</div>

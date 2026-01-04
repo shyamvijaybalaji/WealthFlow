@@ -49,7 +49,7 @@
 {#if mobileMenuOpen}
 	<div
 		onclick={() => mobileMenuOpen = false}
-		class="md:hidden fixed inset-0 bg-black/60 backdrop-blur-sm z-40"
+		class="md:hidden fixed inset-0 bg-black/60 backdrop-blur-sm z-30"
 	></div>
 {/if}
 

@@ -43,18 +43,6 @@ body {
   min-height: 100vh;
 }
 
-/* Ensure proper page rendering without overlap */
-.flex.min-h-screen {
-  position: relative;
-  z-index: 1;
-}
-
-/* Ensure main content is properly positioned */
-main {
-  position: relative;
-  z-index: 1;
-}
-
 /* Scrollbar Styling */
 ::-webkit-scrollbar {
   width: 8px;
