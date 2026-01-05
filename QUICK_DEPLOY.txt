@@ -1,0 +1,143 @@
+════════════════════════════════════════════════════════════════════════════════
+                        WEALTHFLOW - QUICK DEPLOYMENT GUIDE
+════════════════════════════════════════════════════════════════════════════════
+
+📋 ONE-COMMAND DEPLOYMENT
+════════════════════════════════════════════════════════════════════════════════
+
+Step 1: Connect to your VPS
+----------------------------
+ssh root@72.61.233.12
+
+Password: NDSVBdec@2025
+
+
+Step 2: Clone the repository (if not already done):
+---------------------------------------------------
+cd /opt
+git clone https://github.com/shyamvijaybalaji/WealthFlow.git
+cd WealthFlow
+
+
+Step 3: Run the deployment script:
+-----------------------------------
+chmod +x deploy-production.sh
+./deploy-production.sh
+
+
+That's it! The script will:
+✓ Pull latest changes from GitHub
+✓ Create environment files
+✓ Build and start all containers (backend, frontend, database)
+✓ Show container status and logs
+
+⏱️  Estimated time: 5-10 minutes
+
+
+════════════════════════════════════════════════════════════════════════════════
+
+🎯 ACCESS YOUR APPLICATION
+════════════════════════════════════════════════════════════════════════════════
+
+Frontend:  http://72.61.233.12
+API:       http://72.61.233.12:8003
+API Docs:  http://72.61.233.12:8003/docs
+
+
+════════════════════════════════════════════════════════════════════════════════
+
+🔐 DEFAULT LOGIN
+════════════════════════════════════════════════════════════════════════════════
+
+Email:    shyam@example.com
+Password: password123
+
+⚠️  IMPORTANT: Change this password after first login!
+
+
+════════════════════════════════════════════════════════════════════════════════
+
+🛠️  USEFUL COMMANDS
+════════════════════════════════════════════════════════════════════════════════
+
+View logs:
+  cd /opt/WealthFlow
+  docker-compose -f docker-compose.prod.yml logs -f
+
+View specific service:
+  docker-compose -f docker-compose.prod.yml logs -f backend
+  docker-compose -f docker-compose.prod.yml logs -f frontend
+
+Check status:
+  docker-compose -f docker-compose.prod.yml ps
+
+Restart services:
+  docker-compose -f docker-compose.prod.yml restart
+
+Stop everything:
+  docker-compose -f docker-compose.prod.yml down
+
+Start again:
+  docker-compose -f docker-compose.prod.yml up -d
+
+Update application:
+  cd /opt/WealthFlow
+  ./deploy-production.sh
+
+
+════════════════════════════════════════════════════════════════════════════════
+
+🔒 SECURITY CHECKLIST
+════════════════════════════════════════════════════════════════════════════════
+
+After deployment:
+□ Change default user password (shyam@example.com)
+□ Update PostgreSQL password in docker-compose.yml
+□ Set up SSL certificate (see DEPLOYMENT.md)
+□ Configure automated backups
+□ Set up monitoring
+□ Add your OpenAI API key (optional)
+
+
+════════════════════════════════════════════════════════════════════════════════
+
+📚 DETAILED GUIDE
+════════════════════════════════════════════════════════════════════════════════
+
+For advanced configuration, troubleshooting, and SSL setup:
+See: DEPLOYMENT.md in the repository
+
+
+════════════════════════════════════════════════════════════════════════════════
+
+❓ TROUBLESHOOTING
+════════════════════════════════════════════════════════════════════════════════
+
+If deployment fails:
+
+1. Check Docker is running:
+   systemctl status docker
+
+2. View error logs:
+   docker-compose logs -f backend
+   docker-compose logs -f frontend
+
+3. Rebuild containers:
+   cd /opt/WealthFlow
+   ./deploy-production.sh
+
+4. Check firewall:
+   ufw status
+   ufw allow 80/tcp
+   ufw allow 443/tcp
+
+5. Check Nginx:
+   nginx -t
+   systemctl status nginx
+
+
+════════════════════════════════════════════════════════════════════════════════
+
+Need help? Check the logs first, then review DEPLOYMENT.md
+
+════════════════════════════════════════════════════════════════════════════════
